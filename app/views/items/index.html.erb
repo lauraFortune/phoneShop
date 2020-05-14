@@ -1,0 +1,71 @@
+<% provide(:title, "Shop") %>
+
+ <p id="notice"><%= notice %></p>
+ <h2 class="welcome">The Shop</h2>
+
+ <div id="itemCounter">
+  <!--P tag will be placed in here by-->
+ </div>
+  
+ 
+ <div class="card-container">
+  
+   <% @items.each do |item| %>
+      
+     <div class="card">
+       
+       <h3><%= item.title %></h3>
+       
+       <%= link_to (image_tag item.image_url, :class => "card-img"), item %>
+       
+       <div class="card-body"></div>
+       <p><%=  item.description %></p>
+       <p>Price <%= number_to_currency(item.price, :unit => "€") %><br>
+       <p>Brand: <%= item.brand %></p>
+       
+       <br>
+       
+       <p>
+         <%= link_to 'Show',  item, :class => "link", :role => "link" %>
+         <%= link_to 'Edit',  edit_item_path(item), :class => "link", :role => "link" %>
+         <%= link_to 'Destroy',  item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link", :role => "link" %>
+       </p>
+       
+     </div>
+     
+   <% end %>
+
+ </div>
+
+<br>
+
+<%= link_to 'New Item',  new_item_path, :class => "link", :role => "link" %>
+
+
+<script>
+
+/* Keeps count of Items created */
+
+function setItemCount() {
+ 
+  var items = $('.card');
+  var numberOfPhones = items.length;
+  var phoneCounter = document.getElementById("itemCounter");
+ 
+  phoneCounter.innerHTML = "<p>There are currently " + numberOfPhones + " phones in stock</p>";
+ 
+}
+
+setItemCount();
+
+ 
+/* body heading fade-in on page load */
+
+ $(document).ready(function () {
+   
+   $('.welcome').fadeIn(1500).removeClass('hidden');
+   
+ });
+
+
+</script>

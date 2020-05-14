@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <title><%= yield (:title) %> | Laura's PhoneShop</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %> <!-- link to css -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <!-- link to javascript -->
+  </head>
+    
+  <header>
+    <div class="message">
+      <ul>
+        <li><strong><%= link_to "Home", "/" %></strong></li> 
+        <li ><strong><%= link_to "Shop", "/items" %></strong></li>
+      </ul>
+      <h1 id="title">Phones</h1>
+      
+      <!-- trigger modal. -->
+      <a href="#" class="modal-trigger" data-modal="modal-name">Admin Log-in</a> 
+      <!-- modal -->
+      <div class="modal" id="modal-name">
+        <div class="modal-sandbox"></div>
+        <div class="modal-box">
+          
+          <div class="modal-header">
+            <div class="close-modal">&#10006;</div> 
+            <h1>Admin Login</h1>
+          </div>
+          
+          <div class="modal-body">
+            <p>Secret Admin Area!</p>
+            <p>Laboriosam voluptas, iure rem provident laborum culpa atque fugit inventore sit.</p>
+            <br />
+            <button class="close-modal">Log-in</button>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+  <body>
+    
+    <%= yield %>
+    
+    <footer>
+      <p>© LaurasPhoneShop2019</p>
+    </footer>
+    
+  </body>
+  
+</html>
+
+<script>
+
+  /* trigger modal */
+  $(".modal-trigger").click(function(e){
+    
+      e.preventDefault();
+       dataModal = $(this).attr("data-modal");
+      $("#" + dataModal).css({"display":"block"});
+  });
+  
+  /* close modal */
+  $(".close-modal, .modal-sandbox").click(function(){
+    
+      $(".modal").css({"display":"none"});
+  
+  });
+
+</script>
