@@ -1,5 +1,5 @@
 # CA2 Challenge 
-Create a full CRUD rails project which displays mobile phones.
+Create a full CRUD 'Ruby on Rails' project which displays mobile phones.
 <br><br>
 
 ### Built With
@@ -8,7 +8,7 @@ Create a full CRUD rails project which displays mobile phones.
 - [Ruby on Rails](https://rubyonrails.org/)
 
 #### Languages
-- [Ruby](https://www.ruby-lang.org/en/),  [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML),  [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),  [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) - for responsiveness,  [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript),  [Jquery](https://jquery.com/)
+- [Ruby](https://www.ruby-lang.org/en/),  [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML),  [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),  [Flexbox](https://developer.mozilla.org/en-US/docs/Glossary/Flexbox) - for responsiveness,  [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript),  [Jquery](https://jquery.com/)
 
 
 ## Screenshots 
